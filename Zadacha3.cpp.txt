@@ -1,0 +1,43 @@
+// INKI983.enum. teona stojanovska
+#include <iostream>
+using namespace std;
+
+enum Mesec {Januari, Fevruari, Mart, April, Maj, Juni, Juli, Avgust, Septemvri, Oktomvri, Noemvri, Dekemvri};
+
+int main() {
+    // Ispechati gi site meseci vo godinata
+    for (int i = Januari; i <= Dekemvri; i++) {
+        cout << i << " , " << Mesec(i) << endl;
+    } 
+   // Vnesuva mesec preku tastatura
+   int input_month;
+   cout<< "Vnesi go mesecot (1-12):";
+   cin>> input_month;
+   
+   // Odreduva vreme od godinata i mesec po redosled
+   switch (input_month) {
+       case Januari:
+       case Fevruari:
+       case Dekemvri:
+          cout<< "Zima e, " << input_month << " mesec. " <<endl;
+          break;
+      case Mart:
+      case April:
+      case Maj:
+          cout<< "Prolet e," << input_month << " mesec. " <<endl;
+          break;
+      case Juni:
+      case Juli:
+      case Avgust:
+          cout<< "Leto e," << input_month << " mesec. " <<endl;
+          break;
+      case Septemvri:
+      case Oktomvri:
+      case Noemvri:
+          cout<< "Esen e," << input_month << " mesec. " <<endl;
+          break;
+      default:
+          cout<< "Pogreshen vnes. Ve molime vnesete mesec pomegju 1 i 12. " <<endl;
+   }
+   return 0;
+}   
